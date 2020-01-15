@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Moves>
+  <Jab>
+    <Type>Attack</Type>
+    <Range>15-30</Range>
+    <Chance>80</Chance>
+    <Description>A simple jab</Description>
+    <Wins>0</Wins>
+  </Jab>
+
+  <Cross>
+    <Type>Attack</Type>
+    <Range>25-40</Range>
+    <Chance>65</Chance>
+    <Description>A right cross</Description>
+    <Wins>0</Wins>
+  </Cross>
+
+  <Block>
+    <Type>Heal</Type>
+    <Range>15-30</Range>
+    <Chance>70</Chance>
+    <Description>A simple block</Description>
+    <Wins>1</Wins>
+  </Block>
+
+  <Slip>
+    <Type>Heal</Type>
+    <Range>30-40</Range>
+    <Chance>50</Chance>
+    <Description>A simple slip</Description>
+    <Wins>2</Wins>
+  </Slip>
+
+  <Hook>
+    <Type>Attack</Type>
+    <Range>25-40</Range>
+    <Chance>40</Chance>
+    <Description>A right hook</Description>
+    <Wins>3</Wins>
+  </Hook>
+
+  <Uppercut>
+    <Type>Attack</Type>
+    <Range>50-60</Range>
+    <Chance>30</Chance>
+    <Description>A right uppercut</Description>
+    <Wins>3</Wins>
+  </Uppercut>
+</Moves>

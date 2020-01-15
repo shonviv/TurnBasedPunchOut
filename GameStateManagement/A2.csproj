@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{05906DFD-A4C0-4F35-9BA4-48C184BE8ED8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>A2</RootNamespace>
+    <AssemblyName>A2</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.7.0.1708, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MonoGame.Framework.DesktopGL.3.7.0.1708\lib\net45\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Animation2D">
+      <HintPath>.\Libraries\Animation2D.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Enemy.cs" />
+    <Compile Include="Entities\EnemyMatchInfo.cs" />
+    <Compile Include="Entities\EnemySpriteManager.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\PlayerInfo.cs" />
+    <Compile Include="Entities\PlayerSpriteManager.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Managers\SaveAndLoadGame.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Managers\ScreenManagers\GameScreen.cs" />
+    <Compile Include="Managers\ScreenManagers\InputState.cs" />
+    <Compile Include="Managers\ScreenManagers\ScreenManager.cs" />
+    <Compile Include="Screens\BackgroundScreen.cs" />
+    <Compile Include="Screens\GameplayScreen.cs" />
+    <Compile Include="Screens\LoadingScreen.cs" />
+    <Compile Include="Screens\MainMenuScreen.cs" />
+    <Compile Include="Screens\TrainingScreen.cs" />
+    <Compile Include="Screens\MatchInfoScreen.cs" />
+    <Compile Include="Screens\MenuEntry.cs" />
+    <Compile Include="Screens\MenuScreen.cs" />
+    <Compile Include="Screens\OptionsMenuScreen.cs" />
+    <Compile Include="Screens\PauseMenuScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <Content Include="bin\Debug\Animation2D.dll" />
+    <Content Include="bin\Debug\Content\background.png" />
+    <Content Include="bin\Debug\Content\blank.png" />
+    <Content Include="bin\Debug\Content\gradient.png" />
+    <Content Include="bin\Debug\GameStateManagement.exe" />
+    <Content Include="bin\Debug\GameStateManagement.pdb" />
+    <Content Include="bin\Debug\MonoGame.Framework.dll" />
+    <Content Include="bin\Debug\MonoGame.Framework.xml" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\x64\SDL2.dll" />
+    <Content Include="bin\Debug\x64\soft_oal.dll" />
+    <Content Include="bin\Debug\x86\SDL2.dll" />
+    <Content Include="bin\Debug\x86\soft_oal.dll" />
+    <None Include="bin\Debug\Content\ARCADECLASSIC.TTF" />
+    <None Include="bin\Debug\Content\arcadeclassic.xnb" />
+    <None Include="bin\Debug\Content\background.xnb" />
+    <None Include="bin\Debug\Content\blank.xnb" />
+    <None Include="bin\Debug\Content\Enemy.xnb" />
+    <None Include="bin\Debug\Content\gamefont.spritefont" />
+    <None Include="bin\Debug\Content\gamefont.xnb" />
+    <None Include="bin\Debug\Content\gradient.xnb" />
+    <None Include="bin\Debug\Content\JoeYabuki.xnb" />
+    <None Include="bin\Debug\Content\MamoruAoyama.xnb" />
+    <None Include="bin\Debug\Content\menufont.spritefont" />
+    <None Include="bin\Debug\Content\menufont.xnb" />
+    <None Include="bin\Debug\Content\Pixel_NES.xnb" />
+    <None Include="bin\Debug\Content\PressStart2P.ttf" />
+    <None Include="bin\Debug\Content\PressStart2P.xnb" />
+    <None Include="bin\Debug\GameStateManagement.exe.config" />
+    <None Include="bin\Debug\libopenal.1.dylib" />
+    <None Include="bin\Debug\libSDL2-2.0.0.dylib" />
+    <None Include="bin\Debug\MonoGame.Framework.dll.config" />
+    <None Include="bin\Debug\x64\libopenal.so.1" />
+    <None Include="bin\Debug\x64\libSDL2-2.0.so.0" />
+    <None Include="bin\Debug\x86\libopenal.so.1" />
+    <None Include="bin\Debug\x86\libSDL2-2.0.so.0" />
+    <None Include="Content\arcadeclassic.spritefont" />
+    <None Include="Content\bin\DesktopGL\arcadeclassic.xnb" />
+    <None Include="Content\bin\DesktopGL\background.xnb" />
+    <None Include="Content\bin\DesktopGL\blank.xnb" />
+    <None Include="Content\bin\DesktopGL\gradient.xnb" />
+    <None Include="Content\bin\DesktopGL\JoeYabuki.xnb" />
+    <None Include="Content\bin\DesktopGL\Pixel_NES.xnb" />
+    <None Include="Content\Content.mgcb" />
+    <None Include="Content\obj\DesktopGL\.mgcontent" />
+    <None Include="Content\obj\DesktopGL\.mgstats" />
+    <None Include="Content\obj\DesktopGL\arcadeclassic.mgcontent" />
+    <None Include="Content\obj\DesktopGL\background.mgcontent" />
+    <None Include="Content\obj\DesktopGL\blank.mgcontent" />
+    <None Include="Content\obj\DesktopGL\gradient.mgcontent" />
+    <None Include="Content\obj\DesktopGL\JoeYabuki.mgcontent" />
+    <None Include="Content\obj\DesktopGL\Pixel_NES.mgcontent" />
+    <None Include="Content\Pixel_NES.otf" />
+    <None Include="Content\Pixel_NES.spritefont" />
+    <None Include="Libraries\Animation2D.dll" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Background.png" />
+    <Content Include="Content\ARCADECLASSIC.TTF" />
+    <Content Include="Content\background.png" />
+    <Content Include="Content\background.xnb" />
+    <Content Include="Content\blank.png" />
+    <Content Include="Content\blank.xnb" />
+    <Content Include="Content\Enemy.png" />
+    <Content Include="Content\gamefont.spritefont" />
+    <Content Include="Content\gamefont.xnb" />
+    <Content Include="Content\gradient.png" />
+    <Content Include="Content\gradient.xnb" />
+    <Content Include="Content\Images\Backgrounds\GameplayBackground.png" />
+    <Content Include="Content\Images\Sprites\MoveSelectScreen.png" />
+    <Content Include="Content\Images\Sprites\MoveType.png" />
+    <Content Include="Content\Images\Sprites\Wolf\WolfIdle.png" />
+    <Content Include="Content\InfoBar.png" />
+    <Content Include="Content\JoeYabuki.PNG" />
+    <Content Include="Content\MamoruAoyama.png" />
+    <Content Include="Content\menufont.spritefont" />
+    <Content Include="Content\menufont.xnb" />
+    <Content Include="Content\RoundedRectangle.png" />
+    <Content Include="Default.png" />
+    <Content Include="Entities\MoveSet.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="GameThumbnail.png" />
+    <Content Include="Icon.bmp" />
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MonoGame.Framework.DesktopGL.3.7.0.1708\build\MonoGame.Framework.DesktopGL.targets" Condition="Exists('..\packages\MonoGame.Framework.DesktopGL.3.7.0.1708\build\MonoGame.Framework.DesktopGL.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MonoGame.Framework.DesktopGL.3.7.0.1708\build\MonoGame.Framework.DesktopGL.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MonoGame.Framework.DesktopGL.3.7.0.1708\build\MonoGame.Framework.DesktopGL.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>IF EXIST "$(ProjectDir)Content\bin\DesktopGL\*" ( xcopy /D /Y /I /G /R /E  "$(ProjectDir)Content\bin\DesktopGL\*" "$(ProjectDir)$(OutDir)Content\" )</PostBuildEvent>
+  </PropertyGroup>
+</Project>
